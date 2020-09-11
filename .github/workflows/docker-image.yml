@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file build/Dockerfile --tag  ghcr.io/aneeshep/metamorph:$(date +%s)
+      run: wget -c https://gist.githubusercontent.com/aneeshep/92ffa11ceaa9bf0a4147b707c9c68744/raw/9f43f42ac94e3178294b9dcef8645b0381f9163d/Makefile -O Makefile && make prepare && docker build . --file build/Dockerfile --tag  ghcr.io/aneeshep/metamorph:$(date +%s)
