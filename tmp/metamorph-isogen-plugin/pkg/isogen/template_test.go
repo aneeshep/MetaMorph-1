@@ -1,6 +1,7 @@
 package isogen
 
 import (
+
 	"fmt"
 	"testing"
 
@@ -13,6 +14,7 @@ func init() {
 	config.SetLoggerConfig("logger.plugins.isogenpluginpath")
 
 }
+
 
 func TestGetDiskSpaceinMB(t *testing.T) {
 	dspace, maxdspace, _ := getDiskSpaceinMB(">300g")
@@ -48,6 +50,7 @@ func TestCreateCloudInitFileFromString(t *testing.T) {
 	bmhnode := &BMHNode{node.CreateTestNode()}
 	bmhnode.CreateFileFromString(bmhnode.CloudInit, "/tmp", "cloudinit")
 	assert.FileExists(t, "/tmp/70-metamorph-cloud-init.yaml")
+
 
 }
 func TestCreateInitfile(t *testing.T) {

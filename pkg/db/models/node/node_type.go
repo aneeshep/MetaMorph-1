@@ -49,6 +49,16 @@ type Node struct {
 	CloudInit               string
 }
 
+
+  type API struct{
+	  gorm.Model
+	  PluginsID uint
+	  Name  string
+	  Plugin string
+
+  }
+
+
 type Plugins struct {
 	gorm.Model
 	NodeID uint

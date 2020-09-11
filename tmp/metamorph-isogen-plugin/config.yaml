@@ -1,10 +1,9 @@
 ---
 
+
 database:
     type: sqlite
     path: "/tmp/db/metamorph.db"
-
-
 controller:
     port : 8080
 
@@ -17,6 +16,7 @@ logger:
 
 templates:
     rootdir: /root/go/src/github.com/manojkva/MetaMorph
+
     preseed:
         config:  configs/templates/preseed.tmpl
         filepath: preseed/hwe-ubuntu-server.seed
@@ -36,17 +36,19 @@ templates:
         filepath: 50-cloud-init.yaml
     cloudinit:
         filepath: 70-metamorph-cloud-init.yaml
+
     agent_config:
         config:  configs/templates/agent_config.tmpl
         filepath: agent_config.yaml
 
 assets:
    rootdir: /root/go/src/github.com/manojkva/MetaMorph/assets
+
    agent_binary:
           src:  files/metamorph_agent
           dest: metamorph_agent
 
-iso:
+iso: 
   rootpath: /tmp/iso_root
   tempdir: /tmp/iso_root/isos
 
@@ -82,5 +84,3 @@ plugins:
     PowerOn: "metamorph-redfish-plugin"
     GetPowerStatus: "metamorph-redfish-plugin"
  
-
-

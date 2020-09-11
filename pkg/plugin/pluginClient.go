@@ -112,6 +112,7 @@ func (bmhnode *BMHNode) DispenseClientRequest(apiName string) (interface{}, erro
 	inputConfig := base64.StdEncoding.EncodeToString(data)
 
 	hclogger := hclog.New(&hclog.LoggerOptions{
+
 		Name:   "plugin",
 		Output: os.Stdout,
 		Level:  hclog.Trace})

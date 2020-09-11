@@ -15,7 +15,9 @@ import (
 )
 
 func TestClientRequest(t *testing.T) {
+
 	data, err := ioutil.ReadFile("../examples/node1_input.json")
+
 	if err != nil {
 		fmt.Printf("Could not read input config file\n")
 		os.Exit(1)
