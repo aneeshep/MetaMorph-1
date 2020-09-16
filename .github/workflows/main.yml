@@ -35,5 +35,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           pwd
+          ls -l
           cd $GITHUB_WORKSPACE
           go test ./...
